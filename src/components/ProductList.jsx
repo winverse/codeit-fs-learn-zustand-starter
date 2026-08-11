@@ -18,7 +18,13 @@ export default function ProductList() {
         {products.map((product) => (
           <article key={product.id} className="productCard">
             <div className="productIcon" aria-hidden="true">
-              {product.id === 1 ? '🎧' : product.id === 2 ? '⌨️' : '🖥️'}
+              {product.id === 1
+                ? '🎧'
+                : product.id === 2
+                  ? '⌨️'
+                  : product.id === 3
+                    ? '🖱️'
+                    : '🖥️'}
             </div>
             <h3>{product.name}</h3>
             <p className="price">{product.price.toLocaleString()}원</p>
