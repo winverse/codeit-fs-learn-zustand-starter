@@ -117,6 +117,17 @@ button {
   width: 100%;
 }
 
+.btnSquare {
+  width: 40px;
+  padding: 0;
+}
+
+.btnDanger {
+  border-color: #fecaca;
+  color: #b91c1c;
+  background: #fef2f2;
+}
+
 section.card {
   padding: 24px;
 }
@@ -179,6 +190,64 @@ section.card {
   margin: 10px 0 0;
 }
 
+.cartList {
+  display: grid;
+  gap: 12px;
+}
+
+.cartRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(150px, auto);
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.cartRow h3,
+.cartRow p {
+  margin: 0;
+}
+
+.cartRow p {
+  margin-top: 5px;
+}
+
+.qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qtyNumber {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cartTotal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 14px;
+  color: #fff;
+  background: #172033;
+}
+
+.cartTotal strong {
+  font-size: 24px;
+}
+
 @media (max-width: 760px) {
   .header,
   .headerActions,
@@ -189,5 +258,13 @@ section.card {
 
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .cartRow {
+    grid-template-columns: 1fr;
+  }
+
+  .right {
+    justify-content: space-between;
   }
 }
